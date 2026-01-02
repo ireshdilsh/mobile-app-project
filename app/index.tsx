@@ -1,10 +1,11 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Image } from 'react-native'
+import React, { useEffect } from 'react'
 
 export default function index() {
+
   return (
     <View style={styles.container}>
-      <Text>index</Text>
+      <Image source={require("@/assets/images/logo.png")} style={styles.logo}/>
     </View>
   )
 }
@@ -14,5 +15,10 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems:'center',
-  }
+  },
+
+  logo:{
+    height:70,
+    width:250
+  },
 })
