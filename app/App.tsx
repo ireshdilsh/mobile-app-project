@@ -1,6 +1,6 @@
+import { View, Text, StyleSheet, Image } from 'react-native'
+import React, { useEffect } from 'react'
 import { useRouter } from 'expo-router';
-import React, { useEffect } from 'react';
-import { Image, StyleSheet, View } from 'react-native';
 
 export default function App() {
 
@@ -9,9 +9,9 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.replace('/screens/signinscreen');
-    }, 8000);
+    }, 4000);
     return () => clearTimeout(timer);
-  }, [router]);
+  }, []);
 
   return (
     <View style={styles.container}>
