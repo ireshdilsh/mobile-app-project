@@ -2,7 +2,8 @@ import { BarcodeScanningResult, CameraType, CameraView, useCameraPermissions } f
 import { useRouter } from 'expo-router';
 import React, { useRef, useState } from 'react';
 import { Image, Text, View } from 'react-native';
-// import imageView
+import * as MediaLibrary from 'expo-media-library';
+
 
 export default function SigninScreen() {
 
@@ -36,7 +37,11 @@ export default function SigninScreen() {
   // get photos using ref
   const takePhoto = async () => {
     const photo = await cameraRef.current?.takePictureAsync();
-    setphoto(photo?.uri);
+    if (photo?.uri) {
+      const asset = await MediaLibrary.createAssetAsync(photo.uri);
+      setphoto(asset.uri);
+      alert('success saved')
+    }
   }
 
   return (
