@@ -7,8 +7,6 @@ import * as MediaLibrary from 'expo-media-library';
 
 export default function SigninScreen() {
 
-  const router = useRouter();
-
   // using ref for camera view
   const cameraRef = useRef<CameraView>(null);
 
