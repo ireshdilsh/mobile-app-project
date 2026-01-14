@@ -62,7 +62,9 @@ export default function SigninScreen() {
       {/* switch camera facing */}
       <Text style={{ fontSize: 20, padding: 20, color: 'blue' }} onPress={toggleFacing}>Toggle Facing</Text>
       <Text style={{ fontSize: 20, padding: 20, color: '#ffffff', backgroundColor: '#ff0000' }} onPress={takePhoto}>Take Photo</Text>
-      {photos && <Image source={{ uri: photos }} style={{ width: 200, height: 200 }} />}
+      {photos && (
+        <Image source={{ uri: photos }} style={{ width: 200, height: 200 }} />
+      )}
     </View>
   )
 }
