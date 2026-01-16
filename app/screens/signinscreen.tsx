@@ -4,6 +4,10 @@ import React, { useRef, useState } from 'react';
 import { Image, Text, View } from 'react-native';
 import * as MediaLibrary from 'expo-media-library';
 
+// eas login
+// eas build:configure -> select android
+// replace priview -> "android": { "buildType": "apk" }
+// eas build -p android --profile preview
 
 export default function SigninScreen() {
 
